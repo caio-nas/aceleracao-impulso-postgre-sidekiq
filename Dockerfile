@@ -38,4 +38,4 @@ EXPOSE 3000
 
 # Start the main process.
 RUN bundle install
-CMD budle exec rails server -b '0.0.0.0'
+CMD bundle exec rails server -b '0.0.0.0'
