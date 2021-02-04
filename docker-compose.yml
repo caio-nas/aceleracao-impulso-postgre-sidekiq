@@ -11,11 +11,12 @@ services:
 
   web:
     build: .
-    command: bundle exec rails server -b '0.0.0.0'
+    command: bash -c "foreman start"
     volumes:
       - .:/app
     environment:
       BUNDLE_PATH: /app/vendor/bundle
+      REDIS_URL: redis://redis:6379
     ports:
       - '3000:3000'
     depends_on:

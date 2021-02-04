@@ -28,6 +28,8 @@ gem 'redis'
 gem 'sidekiq'
 gem 'awesome_print'
 gem 'rest-client'
+gem 'foreman'
+gem 'after_commit_everywhere', '~> 0.1', '>= 0.1.5'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
@@ -57,4 +59,5 @@ group :test do
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
   gem 'rspec-collection_matchers'
+  gem 'rspec-benchmark'
 end
