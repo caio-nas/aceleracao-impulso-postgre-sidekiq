@@ -53,3 +53,12 @@ task generate_sales: :environment do
     car.sell!(buyer: buyer, seller: seller, closed_at: dates.sample)
   end
 end
+
+task generate_reviews: :environment do
+  reviewables = [Car.all, Brand.all].flatten.sort_by(&:created_at)
+  reviewers = [Buyer.all, Seller.all].flatten.sort_by(&:created_at)
+
+  500.times do
+    Review.create(reviewable: reviewables.sample, reviewer: reviewers.sample, content: FFaker::Lorem.paragraphs(20).join("\n"))
+  end
+end
