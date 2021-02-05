@@ -11,9 +11,9 @@ def value_rand(from = 1, to = 180_000)
 end
 
 task load_brands: :environment do
-  fixture_path = 'spec/fixtures/files/marcas_carros.csv'
+  fixture_path = 'spec/fixtures/files/brands.csv'
   brands = CSV.foreach(Rails.root.join(fixture_path), headers: true)
-  Brand.upsert_all(brands.map { |b| { name: b['name'] } }, unique_by: :index_brands)
+  Brand.upsert_all(brands.map { |b| { name: b['name'] } }, unique_by: :index_brands_on_name)
 end
 
 task load_cars: :environment do
@@ -23,7 +23,7 @@ task load_cars: :environment do
     brands.find { |b| b.name == name }
   end
 
-  fixture_path = 'spec/fixtures/files/carros.csv'
+  fixture_path = 'spec/fixtures/files/cars.csv'
 
   cars = CSV.foreach(Rails.root.join(fixture_path), headers: true).map do |car_row|
     next if car_row['brand'].blank?
@@ -31,7 +31,7 @@ task load_cars: :environment do
     { name: car_row['name'].strip, brand_id: find_brand_by_name(car_row['brand'].strip, brands)&.id }
   end.compact
 
-  Car.insert_all(cars, unique_by: :index_cars)
+  Car.insert_all(cars, unique_by: :index_car_name_brand_id)
 end
 
 task generate_car_value_references: :environment do
