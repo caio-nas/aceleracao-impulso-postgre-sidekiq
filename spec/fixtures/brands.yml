@@ -1,0 +1,273 @@
+audi:
+  id: 6
+  name: Audi
+bmw:
+  id: 7
+  name: BMW
+citroën:
+  id: 13
+  name: Citroën
+fiat:
+  id: 21
+  name: Fiat
+ford:
+  id: 22
+  name: Ford
+gm_chevrolet:
+  id: 23
+  name: GM - Chevrolet
+honda:
+  id: 25
+  name: Honda
+hyundai:
+  id: 26
+  name: Hyundai
+kia_motors:
+  id: 31
+  name: Kia Motors
+mercedes_benz:
+  id: 39
+  name: Mercedes-Benz
+mitsubishi:
+  id: 41
+  name: Mitsubishi
+nissan:
+  id: 43
+  name: Nissan
+peugeot:
+  id: 44
+  name: Peugeot
+renault:
+  id: 48
+  name: Renault
+suzuki:
+  id: 55
+  name: Suzuki
+toyota:
+  id: 56
+  name: Toyota
+volvo:
+  id: 58
+  name: Volvo
+vw_volks_wagen:
+  id: 59
+  name: VW - VolksWagen
+acura:
+  id: 1
+  name: Acura
+agrale:
+  id: 2
+  name: Agrale
+alfa_romeo:
+  id: 3
+  name: Alfa Romeo
+am_gen:
+  id: 4
+  name: AM Gen
+asia_motors:
+  id: 5
+  name: Asia Motors
+aston_martin:
+  id: 189
+  name: ASTON MARTIN
+baby:
+  id: 207
+  name: Baby
+brm:
+  id: 8
+  name: BRM
+buggy:
+  id: 9
+  name: Buggy
+bugre:
+  id: 123
+  name: Bugre
+cadillac:
+  id: 10
+  name: Cadillac
+cbt_jipe:
+  id: 11
+  name: CBT Jipe
+chana:
+  id: 136
+  name: CHANA
+changan:
+  id: 182
+  name: CHANGAN
+chery:
+  id: 161
+  name: CHERY
+chrysler:
+  id: 12
+  name: Chrysler
+cross_lander:
+  id: 14
+  name: Cross Lander
+daewoo:
+  id: 15
+  name: Daewoo
+daihatsu:
+  id: 16
+  name: Daihatsu
+dodge:
+  id: 17
+  name: Dodge
+effa:
+  id: 147
+  name: EFFA
+engesa:
+  id: 18
+  name: Engesa
+envemo:
+  id: 19
+  name: Envemo
+ferrari:
+  id: 20
+  name: Ferrari
+fibravan:
+  id: 149
+  name: Fibravan
+foton:
+  id: 190
+  name: FOTON
+fyber:
+  id: 170
+  name: Fyber
+geely:
+  id: 199
+  name: GEELY
+great_wall:
+  id: 153
+  name: GREAT WALL
+gurgel:
+  id: 24
+  name: Gurgel
+hafei:
+  id: 152
+  name: HAFEI
+hitech_electric:
+  id: 214
+  name: HITECH ELECTRIC
+isuzu:
+  id: 27
+  name: Isuzu
+iveco:
+  id: 208
+  name: IVECO
+jac:
+  id: 177
+  name: JAC
+jaguar:
+  id: 28
+  name: Jaguar
+jeep:
+  id: 29
+  name: Jeep
+jinbei:
+  id: 154
+  name: JINBEI
+jpx:
+  id: 30
+  name: JPX
+lada:
+  id: 32
+  name: Lada
+lamborghini:
+  id: 171
+  name: LAMBORGHINI
+land_rover:
+  id: 33
+  name: Land Rover
+lexus:
+  id: 34
+  name: Lexus
+lifan:
+  id: 168
+  name: LIFAN
+lobini:
+  id: 127
+  name: LOBINI
+lotus:
+  id: 35
+  name: Lotus
+mahindra:
+  id: 140
+  name: Mahindra
+maserati:
+  id: 36
+  name: Maserati
+matra:
+  id: 37
+  name: Matra
+mazda:
+  id: 38
+  name: Mazda
+mclaren:
+  id: 211
+  name: Mclaren
+mercury:
+  id: 40
+  name: Mercury
+mg:
+  id: 167
+  name: MG
+mini:
+  id: 156
+  name: MINI
+miura:
+  id: 42
+  name: Miura
+plymouth:
+  id: 45
+  name: Plymouth
+pontiac:
+  id: 46
+  name: Pontiac
+porsche:
+  id: 47
+  name: Porsche
+ram:
+  id: 185
+  name: RAM
+rely:
+  id: 186
+  name: RELY
+rolls_royce:
+  id: 195
+  name: Rolls-Royce
+rover:
+  id: 49
+  name: Rover
+saab:
+  id: 50
+  name: Saab
+saturn:
+  id: 51
+  name: Saturn
+seat:
+  id: 52
+  name: Seat
+shineray:
+  id: 183
+  name: SHINERAY
+smart:
+  id: 157
+  name: smart
+ssangyong:
+  id: 125
+  name: SSANGYONG
+subaru:
+  id: 54
+  name: Subaru
+tac:
+  id: 165
+  name: TAC
+troller:
+  id: 57
+  name: Troller
+wake:
+  id: 163
+  name: Wake
+walk:
+  id: 120
+  name: Walk
