@@ -10,16 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_05_131113) do
+ActiveRecord::Schema.define(version: 2021_02_05_193657) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "blog_posts", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.tsvector "search"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index "lower((title)::text)", name: "index_blog_posts_on_lower_title", unique: true
+    t.index ["search"], name: "index_blog_posts_on_search", using: :gin
+  end
 
   create_table "brands", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", precision: 6, default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.datetime "updated_at", precision: 6, default: -> { "CURRENT_TIMESTAMP" }, null: false
-    t.index ["name"], name: "index_brands_on_name", unique: true
   end
 
   create_table "buyers", force: :cascade do |t|
@@ -45,7 +54,7 @@ ActiveRecord::Schema.define(version: 2021_02_05_131113) do
     t.bigint "brand_id", null: false
     t.datetime "created_at", precision: 6, default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.datetime "updated_at", precision: 6, default: -> { "CURRENT_TIMESTAMP" }, null: false
-    t.index ["name", "brand_id"], name: "index_car_name_brand_id", unique: true
+    t.index ["brand_id"], name: "index_cars_on_brand_id"
   end
 
   create_table "reviews", force: :cascade do |t|
