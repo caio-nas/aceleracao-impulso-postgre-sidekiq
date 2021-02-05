@@ -6,7 +6,7 @@ require 'csv'
 RSpec.describe '#upsert_all' do
   fixtures :brands
   let(:file) { file_fixture('cars.csv').read }
-  let(:csv)  { csv = CSV.parse(file, headers: true) }
+  let(:csv)  { CSV.parse(file, headers: true) }
   let(:duplication_size) { 5 }
 
   before do

@@ -11,7 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 2021_02_05_193657) do
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -54,7 +53,16 @@ ActiveRecord::Schema.define(version: 2021_02_05_193657) do
     t.bigint "brand_id", null: false
     t.datetime "created_at", precision: 6, default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.datetime "updated_at", precision: 6, default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.integer "score"
+    t.boolean "active", default: true, null: false
+    t.string "serial_number"
+    t.string "serial_number_index_btree"
+    t.string "serial_number_index_hash"
     t.index ["brand_id"], name: "index_cars_on_brand_id"
+    t.index ["name", "brand_id"], name: "index_car_name_brand_id", unique: true
+    t.index ["score"], name: "index_cars_on_score", order: :desc, where: "active"
+    t.index ["serial_number_index_btree"], name: "index_cars_on_serial_number_index_btree"
+    t.index ["serial_number_index_hash"], name: "index_cars_on_serial_number_index_hash", using: :hash
   end
 
   create_table "reviews", force: :cascade do |t|
