@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2021_02_05_131113) do
     t.string "name", null: false
     t.datetime "created_at", precision: 6, default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.datetime "updated_at", precision: 6, default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.index ["name"], name: "index_brands_on_name", unique: true
   end
 
   create_table "buyers", force: :cascade do |t|
@@ -44,7 +45,7 @@ ActiveRecord::Schema.define(version: 2021_02_05_131113) do
     t.bigint "brand_id", null: false
     t.datetime "created_at", precision: 6, default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.datetime "updated_at", precision: 6, default: -> { "CURRENT_TIMESTAMP" }, null: false
-    t.index ["brand_id"], name: "index_cars_on_brand_id"
+    t.index ["name", "brand_id"], name: "index_car_name_brand_id", unique: true
   end
 
   create_table "reviews", force: :cascade do |t|
