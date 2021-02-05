@@ -29,3 +29,4 @@ docker-compose run web RAILS_ENV=test bundle exec rspec -fd --profile
 - https://www.citusdata.com/blog/2017/10/17/tour-of-postgres-index-types/
 - https://karolgalanciak.com/blog/2018/08/19/indexes-on-rails-how-to-make-the-most-of-your-postgres-database/
 - https://medium.com/better-programming/how-to-use-sidekiq-in-rails-6-f3b76678362d
+- https://bigbinary.com/blog/rails-5-adds-support-for-expression-indexes-for-postgresql

@@ -13,6 +13,9 @@ class CarIndexExamples < ActiveRecord::Migration[6.0]
   disable_ddl_transaction!
 
   def change
+    # For queries like `Car.where("lower(name) like ?", "%#{name.downcase}%")`
+    add_index :cars, 'lower(name) varchar_pattern_ops', name: "index_on_lowercase_name"
+
     add_column :cars, :score, :integer
     add_column :cars, :active, :boolean, null: false, default: true
 
