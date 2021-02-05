@@ -85,6 +85,8 @@ GEM
       dotenv (= 2.7.6)
       railties (>= 3.2)
     erubi (1.10.0)
+    execution_time (0.1.2)
+      rails
     factory_bot (6.1.0)
       activesupport (>= 5.0.0)
     factory_bot_rails (6.1.0)
@@ -92,6 +94,7 @@ GEM
       railties (>= 5.0.0)
     faker (2.15.1)
       i18n (>= 1.6, < 2)
+    ffaker (2.17.0)
     ffi (1.14.2)
     foreman (0.87.2)
     globalid (0.4.2)
@@ -208,6 +211,9 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.10.2)
+    scenic (1.5.4)
+      activerecord (>= 4.0.0)
+      railties (>= 4.0.0)
     shoulda-callback-matchers (1.1.4)
       activesupport (>= 3)
     shoulda-matchers (4.5.1)
@@ -233,6 +239,8 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    store_model (0.8.0)
+      activerecord (>= 5.2)
     thor (1.1.0)
     thread_safe (0.3.6)
     tzinfo (1.2.9)
@@ -250,34 +258,35 @@ PLATFORMS
 
 DEPENDENCIES
   after_commit_everywhere (~> 0.1, >= 0.1.5)
-  awesome_print
+  awesome_print (= 1.8.0)
   bootsnap (>= 1.4.2)
-  byebug
-  database_cleaner
-  dotenv-rails
-  factory_bot
-  factory_bot_rails
-  faker
-  foreman
+  database_cleaner (= 2.0.1)
+  dotenv-rails (= 2.7.6)
+  execution_time (= 0.1.2)
+  factory_bot_rails (= 6.1.0)
+  faker (= 2.15.1)
+  ffaker
+  foreman (= 0.87.2)
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
-  pry-byebug
-  pry-rails
+  pry-byebug (= 3.9.0)
+  pry-rails (= 0.3.9)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.4)
-  rails-controller-testing
-  redis
-  rest-client
-  rspec-benchmark
-  rspec-collection_matchers
-  rspec-rails
-  shoulda-callback-matchers
-  shoulda-matchers
-  sidekiq
-  simplecov
-  spring
+  rails-controller-testing (= 1.0.5)
+  redis (= 4.2.5)
+  rest-client (= 2.1.0)
+  rspec-benchmark (= 0.6.0)
+  rspec-collection_matchers (= 1.2.0)
+  rspec-rails (= 4.0.2)
+  scenic (= 1.5.4)
+  shoulda-callback-matchers (= 1.1.4)
+  shoulda-matchers (= 4.5.1)
+  sidekiq (= 6.1.3)
+  simplecov (= 0.21.2)
+  spring (= 2.1.1)
   spring-watcher-listen (~> 2.0.0)
-  tzinfo-data
+  store_model (= 0.8.0)
 
 RUBY VERSION
    ruby 2.7.2p137
