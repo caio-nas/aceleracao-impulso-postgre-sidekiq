@@ -13,6 +13,7 @@ gem 'redis', '4.2.5'
 gem 'rest-client', '2.1.0'
 gem 'scenic', '1.5.4'
 gem 'sidekiq', '6.1.3'
+gem 'store_model', '0.8.0'
 
 group :development do
   gem 'dotenv-rails', '2.7.6'
@@ -23,6 +24,8 @@ group :development do
 end
 
 group :development, :test do
+  gem 'factory_bot_rails', '6.1.0'
+  gem 'ffaker'
   gem 'pry-rails', '0.3.9'
   gem 'pry-byebug', '3.9.0'
   gem 'execution_time', '0.1.2'
@@ -30,8 +33,6 @@ end
 
 group :test do
   gem 'database_cleaner', '2.0.1'
-  gem 'factory_bot', '6.1.0'
-  gem 'factory_bot_rails', '6.1.0'
   gem 'faker', '2.15.1'
   gem 'rails-controller-testing', '1.0.5'
   gem 'rspec-benchmark', '0.6.0'
